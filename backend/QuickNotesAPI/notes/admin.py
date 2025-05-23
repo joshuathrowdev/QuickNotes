@@ -9,5 +9,5 @@ class NoteAdmin(admin.ModelAdmin):
   
   # Dynamic List Display (Method Override)
   def get_list_display(self, request):
-    field_list = [field.name for field in self.model.meta.fields]
+    field_list = [field.name for field in self.model._meta.fields]
     return field_list
