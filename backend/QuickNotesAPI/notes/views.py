@@ -1,7 +1,7 @@
 # Giving API JSON Response
 from rest_framework.response import Response
 # HTTP Method (decorator)
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view # Only for function based views
 # API Status codes
 from rest_framework import status
 
@@ -14,17 +14,34 @@ from .models import Note
 from .serializers import NoteSerializer
 
 # Create your views here.
-@api_view(['GET'])
+# Class Based View (APIView)
 class ListNotesView(APIView):
   # handle all HTTP Methods (by overriding APIView methods)
+  # we override the HTTP methods that we want to
+  # We have to pass the self pointer and the request
 
-  def get(self):
+  def get(self, request):
     notes = Note.objects.get()
     serializer = NoteSerializer(notes) # pass the serializer the instance (object(s)) that you want it to serializer
     # Remember it will auto map the data since we define the innter meta class
 
     return Response(serializer.data, status=status.HTTP_200_OK)
   # The Response function auto wraps any datatype in the correct pythonic container
+
+
+# Function Based View 
+@api_view(['GET']) # Defining what HTTP methods it has access to
+def NoteDetailsView(request, note_id):
+
+  if request.method == 'GET':
+    try:
+      note = Note.objects.get(pk=note_id)
+      serializer = NoteSerializer(note)
+
+      return Response(serializer.data, status=status.HTTP_200_OK)
+    except:
+      return Response(status=status.HTTP_400_BAD_REQUEST)
+
 
 
 
