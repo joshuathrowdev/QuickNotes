@@ -30,3 +30,21 @@ class NoteSerializer(serializers.ModelSerializer):
 # Calls:
   # create() if instance=None (usually POST)
   # update() if instance=... (PUT/PATCH)
+
+# Common Patterns
+  # - Read-only or write only fields
+  # Cusome Validation (functions/methods within the serializer class that validate request data)
+  # Nested serializers for other models 
+
+
+#  Serializing data
+  # serializer = NoteSerializer(instance (the data we want to serializer))
+
+# Deserializing data
+  # serializer = NoteSerializer(request.data)
+
+# Saving new object
+  # serializer.save()
+
+# updated existing object
+  # serializer.save(instance=existing)instance
