@@ -9,4 +9,4 @@ import router from './router/index.js'
 import './style.css'
 import './styles/main.css'
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')
