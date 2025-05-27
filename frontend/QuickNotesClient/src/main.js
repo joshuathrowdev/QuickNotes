@@ -6,7 +6,6 @@ import App from './App.vue'
 import router from './router/index.js'
 
 // Styling Imports
-import './style.css'
 import './styles/main.css'
 
 createApp(App).use(router).mount('#app')

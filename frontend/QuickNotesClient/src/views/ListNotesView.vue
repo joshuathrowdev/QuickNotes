@@ -1,5 +1,5 @@
 <template>
-  <div class="ListNotesViewContainer">
+  <div class="List-Notes-View-Root-Container">
     <div v-if="notes.length">
       <NoteList :notes="notes"/>
     </div>

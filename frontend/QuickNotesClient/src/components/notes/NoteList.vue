@@ -1,8 +1,10 @@
 <template>
-  <div class="NoteListContainer">
-    <h1>Available Notes</h1>
-    <div v-for="note in notes" :key="note.id">
+  <div class="Note-List-Root-Container">
+    <h1 class="text-4xl font-bold italic tracking-wide text-mainPurple mb-4">Available Notes</h1>
+    <div class="Note-List-Static-Container">
+      <div v-for="note in notes" :key="note.id">
       <Note :note="note" />
+    </div>
     </div>
   </div>
   

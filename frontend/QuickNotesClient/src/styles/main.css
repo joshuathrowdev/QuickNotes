@@ -1,6 +1,55 @@
+/* Vite Tailwindcss Plugin Import */
 @import "tailwindcss";
 
+/* Tailwindcss Dependencies Imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: black;
+  background-color: #FAF9F6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+/* List Notes View Tree */
+.List-Notes-View-Root-Container {
+  @apply p-4 m-2
+}
+
+.Note-List-Root-Container {
+  @apply p-2 text-center
+}
+
+.Note-List-Static-Container {
+  @apply flex flex-row justify-around
+}
+
+.Note-Root-Container {
+  @apply m-2 border border-2 p-4 rounded-xl transition ease-in-out hover:shadow-xl 
+}
+
+.Note-Root-Container h2 {
+  @apply text-xl font-semibold
+}
 
 
 

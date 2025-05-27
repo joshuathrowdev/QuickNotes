@@ -1,5 +1,5 @@
 <template>
-  <div class="NoteContainer m-2">
+  <div class="Note-Root-Container">
     <h2>{{ note.title }} | {{ note.id }}</h2>
     <p>{{ note.body }}</p>
   </div>
