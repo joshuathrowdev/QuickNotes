@@ -29,6 +29,16 @@ body {
   min-height: 100vh;
 }
 
+/* Common */
+.Display-Heading-2 {
+  @apply text-4xl font-bold italic 
+  tracking-wide mb-4
+}
+
+.Form-Submit-Button {
+  @apply block border border-2
+}
+
 
 /* List Notes View Tree */
 .List-Notes-View-Root-Container {
@@ -50,6 +60,29 @@ body {
 .Note-Root-Container h2 {
   @apply text-xl font-semibold
 }
+
+
+
+/* Forms */
+.Add-Note-From-Root-Container {
+  @apply m-3 p-4 text-center flex flex-col items-center 
+}
+
+.Add-Note-Form-Static-Container {
+  @apply border border-2 p-4 m-2 flex flex-col w-xl
+}
+
+.Add-Note-Form-Static-Container label {
+  @apply text-xl font-semibold tracking-wide block
+}
+
+.Add-Note-Form-Static-Container input {
+  @apply border border-2 text-center
+  rounded-xl
+}
+
+
+
 
 
 
